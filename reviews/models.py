@@ -11,10 +11,8 @@ class Mineral_Water(models.Model):
     def __unicode__(self):
         return self.name
 
-    # @classmethod
-    # def create(cls,name):
-    #     mineralwater_name = cls(name=name)
-    #     return mineralwater_name
+    def __str__(self):
+        return self.name
 
 
 class Review(models.Model):
