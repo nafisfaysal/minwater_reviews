@@ -1,0 +1,17 @@
+<h2>Mineral Water list</h2>
+
+{% if mineralwater_list %}
+<div>
+    {% for mineralwater in mineralwater_list %}
+    <div>
+        <h4><a href="{% url 'reviews:mineralwater_detail' mineralwater.id %}">
+        {{ mineralwater.name }}
+        </a></h4>
+        <h5>{{ mineralwater.review_set.count }} reviews</h5>
+        <h5>{{ mineralwater.average_rating | floatformat }} average rating</h5>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+    <p>No Mineral Water are available.</p>
+{% endif %}
