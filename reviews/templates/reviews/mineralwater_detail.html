@@ -1,24 +1,22 @@
-{% extends 'reviews/base.html' %}
+{% extends 'base.html' %}
 {% load bootstrap3 %}
-
 
 {% block title %}
 <h2>{{ mineralwater.name }}</h2>
 <h5>{{ mineralwater.review_set.count }} reviews ({{ mineralwater.average_rating | floatformat }} average rating)</h5>
 {% endblock %}
 
-
 {% block content %}
 <h3>Recent reviews</h3>
 
 {% if mineralwater.review_set.all %}
-<div>
+<div class="row">
     {% for review in mineralwater.review_set.all %}
-    <div>
+    <div class="col-xs-6 col-lg-4">
         <em>{{ review.comment }}</em>
-        <h6>Rated {{ review.rating }} of 5 by {{ review.user_name }}</h6>
+        <h6>Rated {{ review.rating }} of 5 by <a href="{% url 'reviews:user_review_list' review.user_name %}" >{{ review.user_name }}</a></h6>
         <h5><a href="{% url 'reviews:review_detail' review.id %}">
-        Read more..
+        Read more
         </a></h5>
     </div>
     {% endfor %}

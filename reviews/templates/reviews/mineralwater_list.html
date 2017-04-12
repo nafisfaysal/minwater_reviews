@@ -1,9 +1,14 @@
-<h2>Mineral Water list</h2>
+{% extends 'base.html' %}
 
+{% block title %}
+<h2>Mineral Water list</h2>
+{% endblock %}
+
+{% block content %}
 {% if mineralwater_list %}
-<div>
+<div class="row">
     {% for mineralwater in mineralwater_list %}
-    <div>
+    <div class="col-xs-6 col-lg-4">
         <h4><a href="{% url 'reviews:mineralwater_detail' mineralwater.id %}">
         {{ mineralwater.name }}
         </a></h4>
@@ -15,3 +20,4 @@
 {% else %}
     <p>No Mineral Water are available.</p>
 {% endif %}
+{% endblock %}
