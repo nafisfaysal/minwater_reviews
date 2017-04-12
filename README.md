@@ -9,6 +9,6 @@ This was only tested on Linux environments. It might also work on Windows (I am 
 
 # Contributing
 
-The issue tracker is the preferred channel for bug reports, features requests and feel free to submitting pull requests.
+The <a href="https://github.com/NafisFaysal/minwater_reviews/issues"> issue</a> tracker is the preferred channel for bug reports, features requests and feel free to submitting pull requests.
 
 
