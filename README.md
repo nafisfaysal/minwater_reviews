@@ -13,7 +13,7 @@ This was only tested on Linux environments. It might also work on Windows (I am 
 
 ## Installation
 
-pretty simple just install [ANACONDA](https://www.continuum.io/downloads) .It already has preinstalled all the package and other requirements stuff.
+Pretty simple just install [ANACONDA](https://www.continuum.io/downloads) .It already has preinstalled all the package and other requirements stuff.
 
 ## Usage
 If you installed [ANACONDA](https://www.continuum.io/downloads) distribution package, you can start with: 
